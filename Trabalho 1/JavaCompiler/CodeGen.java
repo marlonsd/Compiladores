@@ -1,11 +1,15 @@
 class CodeGen{
 
 	
-	String geraCodigo (ArvoreSintatica arv)
+	String geraCodigo (ArvoreSintatica arv) throws Exception
 	{
-		return (geraCodigo2(arv) + "PRINT");
+		try{
+			return (geraCodigo2(arv) + "PRINT");
+		} catch (Exception e){
+			throw e;
+		}
 	}
-	String geraCodigo2 (ArvoreSintatica arv)
+	String geraCodigo2 (ArvoreSintatica arv) throws Exception
 	{
 
 	if (arv instanceof Mult)
@@ -23,10 +27,15 @@ class CodeGen{
 			geraCodigo2(((Sub) arv).arg2) +
 			"SUB\n");
 
-	if (arv instanceof Div)
-		return (geraCodigo2(((Div) arv).arg1) + 
-			geraCodigo2(((Div) arv).arg2) +
-			"DIV\n");
+	if (arv instanceof Div) {
+		try {
+			return (geraCodigo2(((Div) arv).arg1) + 
+				geraCodigo2(((Div) arv).arg2) +
+				"DIV\n");
+		} catch (Exception e){
+			throw e;
+		}
+	}
 
 	if (arv instanceof Num)
 		return ("PUSH "  + ((Num) arv).num + "\n");
@@ -54,12 +63,12 @@ class CodeGen{
 			interpretador2(((Soma) arv).arg2));
 
 		if (arv instanceof Div){
-
-			if (interpretador2(((Div) arv).arg2) == 0)
-				throw (new Exception("Não é possível efetura divisão por zero."));
-
-			return (interpretador2(((Div) arv).arg1) / 
-			interpretador2(((Div) arv).arg2));
+			try{
+				return (interpretador2(((Div) arv).arg1) / 
+				interpretador2(((Div) arv).arg2));
+			} catch (Exception e){
+				throw e;
+			}
 		}
 
 		if (arv instanceof Sub)

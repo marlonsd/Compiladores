@@ -26,8 +26,8 @@ class Parser{
 
 		if(tokenCorrente.token == TokenType.NUM)
 			return new Num(Integer.parseInt(tokenCorrente.lexema+""));
-		
-		
+
+
 		if(tokenCorrente.token == TokenType.APar)
 			{
 				exp1 = Exp();
@@ -43,6 +43,9 @@ class Parser{
 				if(exp2 == null)
 					throw (new Exception("Não enconrtrei expressão!"));	
 				
+				if ((op instanceof Div) && (((Num) exp2).num == 0))
+					throw (new Exception("Não é possível realizar divisão por zero."));
+
 				op.arg1 = exp1;
 				op.arg2 = exp2;
 				tokenCorrente =  scanner.getNextToken();

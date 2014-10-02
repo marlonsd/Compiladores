@@ -26,24 +26,27 @@ class Compilador{
 
 			CodeGen backend = new CodeGen();
 
+			String out;
+
 			if (op == 1){
 				try{
-					String out = backend.interpretador(arv);
+					out = backend.interpretador(arv);
 					System.out.println(out);
 				} catch (Exception e){
 					System.out.println(e);
 				}
 			} else {
-				String codigo = backend.geraCodigo(arv);
-				System.out.println(codigo);
+				try {
+					out = backend.geraCodigo(arv);
+					System.out.println(out);
+				} catch (Exception e){
+					System.out.println(e);
+				}
 			}
 
-		}catch(Exception e)
-		{			
+		} catch(Exception e) {			
 			System.out.println("Erro de compilação:\n" + e);
 		}
-
-
 
 	}
 }
