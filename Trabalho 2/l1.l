@@ -1,7 +1,6 @@
 DIGITO			[0-9]
 LETRA			[a-zA-Z]
 SUBLINHADO		"_"
-%% ID				({LETRA}(({LETRA}|{DIGITO})|{SUBLINHADO}({LETRA}|{DIGITO}))*({LETRA}|{DIGITO}))|{LETRA}
 ID				{LETRA}({LETRA}|{DIGITO}|{SUBLINHADO})*
 EXP				("e"|"E")("+"|"-")?{DIGITO}+
 
