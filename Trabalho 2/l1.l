@@ -13,7 +13,7 @@ MainClass			{"class"}{Identifier}{"{"}{"public"}{"static"}{"void"}{"main"}{"("}{
 ClassDeclaration	{"class"}{Identifier}({"extends"}{Identifier})?{"{"}({VarDeclaration})*({MethodDeclaration})*{"}"}
 VarDeclaration		{Type}{Identifier}{";"}
 MethodDeclaration	{"public"}{Type}{Identifier}{"("}({Type}{Identifier}({","}{Type}{Identifier})*)?{")"}{"{"}({VarDeclaration})*({Statement})*{"return"}{Expression}{";"}{"}"}
-Type				("int""[""]"|"boolean"|"int"|{Identifier})
+Type				("int"{WHITESPACE}*"[""]"|"boolean"|"int"|{Identifier})
 Statement			{"{"}({Statement})*{"}"})|({"if"}{"("}{Expression}{")"}{Statement}{"else"}{Statement})|({"while"}{"("}{Expression}{")"}{Statement})|({"System.out.println"}{"("}{Expression}{")"}{";"})|({Identifier}{"="}{Expression}{";"})|({Identifier}{"["}{Expression}{"]"}{"="}{Expression}{";"}
 
 Expression			{OP}({OP1})*
@@ -23,7 +23,7 @@ OP 					(INTEGER_LITERAL)|("true")|("false")|({Identifier})|("this")|("new" "int
 
 
 %%
-{Type}					{printf("Expressao: %s\n",yytext);}
+{Type}							{printf("Tipo: %s\n",yytext);}
 {WHITESPACE}+					{}
 {DIGITO}+						{printf("Numero: %s\n",yytext);}
 {IDENTIFIER}					{printf("Identifier: %s\n",yytext);}
