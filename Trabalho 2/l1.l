@@ -4,7 +4,7 @@ LETRA				[a-zA-Z]
 IDENTIFIER			{LETRA}({LETRA})|({DIGITO})|("_")*
 INTEGER_LITERAL		{DIGITO}+
 
-Identifier			{IDENTIFIER}
+WHITESPACE [\t\n\r]
 
 Goal				{MainClass}({ClassDeclaration})*<<EOF>>
 MainClass			{"class"}{Identifier}{"{"}{"public"}{"static"}{"void"}{"main"}{"("}{"String"}{"["}{"]"}{Identifier}{")"}{"{"}{Statement}{"}"}{"}"}
@@ -21,8 +21,8 @@ OP 					(INTEGER_LITERAL)|("true")|("false")|({Identifier})|("this")|("new" "int
 
 
 %%
-{INTEGER_LITERAL}				{printf("Inteiro: %s\n",yytext);}
-{IDENTIFIER}					{printf("var: %s\n",yytext);}
+{IDENTIFIER}					{printf("Identifier: %s\n",yytext);}
+{WHITESPACE}+					{}
 
 %%
 int yywrap();
