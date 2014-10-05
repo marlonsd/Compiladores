@@ -14,9 +14,9 @@ MethodDeclaration	{"public"}{Type}{Identifier}{"("}({Type}{Identifier}({","}{Typ
 Type				({"int"}{"["}{"]"})|({"boolean"})|({"int"})|({Identifier}
 Statement			{"{"}({Statement})*{"}"})|({"if"}{"("}{Expression}{")"}{Statement}{"else"}{Statement})|({"while"}{"("}{Expression}{")"}{Statement})|({"System.out.println"}{"("}{Expression}{")"}{";"})|({Identifier}{"="}{Expression}{";"})|({Identifier}{"["}{Expression}{"]"}{"="}{Expression}{";"}
 
-Expression			{A}({B})*
-B 					("&&")|("<")|("+")|("-")|("*"){Expression}({B})*)|("["{Expression}"]"({B})*)|(".""length"({B})*)|("."{Identifier}"("({Expression}(","{Expression})*)?")"({B})*    
-A 					(INTEGER_LITERAL)|("true")|("false")|({Identifier})|("this")|("new" "int" "[" {Expression} "]")|("new" {Identifier} "(" ")")|("!" {Expression})|("(" {Expression} ")"
+Expression			{OP}({OP1})*
+OP1 				("&&")|("<")|("+")|("-")|("*"){Expression}({OP1})*)|("["{Expression}"]"({OP1})*)|(".""length"({OP1})*)|("."{Identifier}"("({Expression}(","{Expression})*)?")"({OP1})*    
+OP 					(INTEGER_LITERAL)|("true")|("false")|({Identifier})|("this")|("new" "int" "[" {Expression} "]")|("new" {Identifier} "(" ")")|("!" {Expression})|("(" {Expression} ")"
 
 
 
