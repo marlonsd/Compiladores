@@ -1,0 +1,226 @@
+PARSER_BEGIN(MiniJava)
+import java.io.*;
+public class MiniJava {
+
+  public static void main(String args[]) throws ParseException,IOException {
+    
+    MiniJava parser = new MiniJava(new FileInputStream(args[0]));
+    parser.Goal();
+  }
+
+}
+
+PARSER_END(MiniJava)
+
+SKIP :
+{
+  " "
+| "\t"
+| "\n"
+| "\r"
+| < "//" (~["\n"])* "\n" >
+| < "/*" (~[])* "*/" >
+}
+
+TOKEN :
+{
+  <MAIN: "main">
+| <CLASS: "class">
+| <PUB: "public">
+| <VOID: "void">
+| <EXT: "extends">
+| <STR: "String">
+| <STATIC: "static">
+| <LENGTH: "length">
+| <RETURN: "return">
+}
+
+TOKEN:
+{
+  <INTEIRO: "int">
+| <BOOL: "boolean">
+}
+
+TOKEN:
+{
+  <IF: "if">
+| <ELSE: "else">
+| <WHILE: "while">
+| <PRINT: "System.out.println">
+| <NEW: "new">
+}
+
+TOKEN : 
+{
+  <LPAREN:"(">
+| <RPAREN: ")">
+| <LBRACE: "[">
+| <RBRACE: "]">
+| <LCBRACK: "{">
+| <RCBRACK: "}">
+| <SEMI: ";">
+| <COMMA: ",">
+| <PERIOD: ".">
+}
+
+
+TOKEN :
+{
+  <OPERADOR_MULTIPLICATIVO: "*">
+| <OPERADOR_ADITIVO: ("+"| "-")>
+| <AND: "&&">
+| <COMP: "<">
+| <INTEGER_LITERAL: ["0"-"9"](["0"-"9"])*>
+| <IGUAL: "=">
+| <TRUE: "true">
+| <FALSE: "false">
+| <THIS: "this">
+| <EXCLAMATION: "!">
+| <ID: ["a"-"z","A"-"Z"](["a"-"z","A"-"Z","0"-"9","_"])*>
+}
+
+
+void Goal () :
+{}
+{
+  MainClass() (ClassDeclaration())* <EOF>
+}
+
+void MainClass():
+{}
+{
+  <CLASS> Identifier() <LCBRACK> <PUB> <STATIC> <VOID> <MAIN> <LPAREN> <STR> <LBRACE> <RBRACE> Identifier() <RPAREN> <LCBRACK> Statement() <RCBRACK> <RCBRACK>
+}
+
+void ClassDeclaration():
+{}
+{
+  <CLASS> Identifier() [ <EXT> Identifier() ] <LCBRACK> ( VarDeclaration() )* ( MethodDeclaration() )* <RCBRACK>
+}
+
+void VarDeclaration():
+{}
+{
+  Type() Identifier() <SEMI>
+}
+
+void MethodDeclaration():
+{}
+{
+  <PUB> Type() Identifier() <LPAREN> [ LOOKAHEAD(2) Type() Identifier() ( <COMMA> Type() Identifier() )* ] <RPAREN> <LCBRACK> ( LOOKAHEAD(2) VarDeclaration() )* ( Statement() )* <RETURN> Expression() <SEMI> <RCBRACK>
+}
+
+void Type():
+{}
+{
+  <INTEIRO> [<LBRACE> <RBRACE>]
+|
+  <BOOL>
+|
+  Identifier()
+}
+
+void Statement():
+{}
+{
+  <LCBRACK> ( Statement() )* <RCBRACK>
+|
+  <IF> <LPAREN> Expression() <RPAREN> Statement() <ELSE> Statement()
+|
+  <WHILE> <LPAREN> Expression() <RPAREN> Statement()
+|
+  <PRINT> <LPAREN> Expression() <RPAREN> <SEMI>
+|
+  Identifier() PosID() <SEMI>
+}
+
+void PosID():
+{}
+{
+  <IGUAL> Expression()
+|
+  <LBRACE> Expression() <RBRACE> <IGUAL> Expression()
+}
+
+void Expression():
+{}
+{
+  A()[LOOKAHEAD(2) B()]
+}
+
+void A():
+{}
+{
+ <INTEGER_LITERAL> 
+|
+  <TRUE>
+|
+  <FALSE>
+|
+  Identifier()
+|
+  <THIS>
+|
+  <NEW> Novo()
+|
+  <EXCLAMATION> Expression()
+|
+  <LPAREN> Expression() <RPAREN>
+}
+
+void Novo():
+{}
+{
+  <INTEIRO> <LBRACE> Expression() <RBRACE>
+|
+  Identifier() <LPAREN> <RPAREN>
+}
+
+void B():
+{}
+{
+  C() Expression() [LOOKAHEAD(2) B() ]
+|
+  <LBRACE> Expression() <RBRACE> [LOOKAHEAD(2) B() ]
+|
+  <PERIOD> Dot() [LOOKAHEAD(2) B() ]
+}
+
+void Dot():
+{}
+{
+  <LENGTH>
+|
+  Identifier() <LPAREN> [ Expression() (Lista())* ] <RPAREN>
+}
+
+void Lista():
+{}
+{
+  <COMMA> Expression() 
+}
+
+void C():
+{}
+{
+  <AND>
+|
+  <COMP>
+|
+  <OPERADOR_ADITIVO>
+|
+  <OPERADOR_MULTIPLICATIVO>
+}
+
+void Identifier():
+{}
+{
+  <ID>
+}
+
+
+
+
+
+
+
