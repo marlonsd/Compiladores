@@ -218,28 +218,6 @@ void Identifier():
   <ID>
 }
 
-//void Programa () :
-//{}
-//{ <PROGRAM> <ID> 
-//  <LBRACE> Lista_de_identificadores() <RBRACE> <SEMI> 
-////   Declaracoes() 
-////   Declaracoes_de_subprogramas() Enunciado_composto() <PERIOD>
-//  <EOF> 
-//}
-	
-
-//void Lista_de_identificadores():
-//{}
-//{
-//  <ID> Lista2()
-//}
-
-//void Lista2():
-//{}
-//{
-// (<COMMA> <ID> Lista2())?
-//}
-
 
 
 
