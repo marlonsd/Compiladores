@@ -18,6 +18,8 @@ SKIP :
 | "\t"
 | "\n"
 | "\r"
+| < "//" (~["\n"])* "\n" >
+| < "/*" (~[])* "*/" >
 }
 
 TOKEN :
@@ -129,15 +131,21 @@ void Statement():
 |
   <PRINT> <LPAREN> Expression() <RPAREN> <SEMI>
 |
-  LOOKAHEAD(2) Identifier() <IGUAL> Expression() <SEMI>
+  Identifier() PosID() <SEMI>
+}
+
+void PosID():
+{}
+{
+  <IGUAL> Expression()
 |
-  Identifier() <LBRACE> Expression() <RBRACE> <IGUAL> Expression() <SEMI>
+  <LBRACE> Expression() <RBRACE> <IGUAL> Expression()
 }
 
 void Expression():
 {}
 {
-  A()B()
+  A()[LOOKAHEAD(2) B()]
 }
 
 void A():
@@ -175,9 +183,15 @@ void B():
 |
   <LBRACE> Expression() <RBRACE> [LOOKAHEAD(2) B() ]
 |
-  LOOKAHEAD(2) <PERIOD> <LENGTH> [LOOKAHEAD(2) B() ]
+  <PERIOD> Dot() [LOOKAHEAD(2) B() ]
+}
+
+void Dot():
+{}
+{
+  <LENGTH>
 |
-  <PERIOD> Identifier() <LPAREN> [ Expression() (Lista())* ] <RPAREN> [LOOKAHEAD(2) B() ]
+  Identifier() <LPAREN> [ Expression() (Lista())* ] <RPAREN>
 }
 
 void Lista():
