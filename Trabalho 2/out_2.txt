@@ -1,0 +1,662 @@
+Palavra reservada: class
+Identifier: BinarySearch
+Abre Chaves: {
+Palavra reservada: public
+Palavra reservada: static
+Palavra reservada: void
+Palavra reservada: main
+Abre Parenteses: (
+Palavra reservada: String
+Abre Conchete: [
+Fecha Conchete: ]
+Identifier: a
+Fecha Parenteses: )
+Abre Chaves: {
+Palavra reservada: System.out.println
+Abre Parenteses: (
+Palavra reservada: new
+Identifier: BS
+Abre Parenteses: (
+Fecha Parenteses: )
+Ponto: .
+Identifier: Start
+Abre Parenteses: (
+Numero: 20
+Fecha Parenteses: )
+Fecha Parenteses: )
+Ponto-Virgula: ;
+Fecha Chaves: }
+Fecha Chaves: }
+Comentario: // This class contains an array of integers and
+Comentario: // methods to initialize, print and search the array
+Comentario: // using Binary Search
+Palavra reservada: class
+Identifier: BS
+Abre Chaves: {
+Palavra reservada: int
+Abre Conchete: [
+Fecha Conchete: ]
+Identifier: number
+Ponto-Virgula: ;
+Palavra reservada: int
+Identifier: size
+Ponto-Virgula: ;
+Comentario: // Invoke methods to initialize, print and search
+Comentario: // for elements on the array
+Palavra reservada: public
+Palavra reservada: int
+Identifier: Start
+Abre Parenteses: (
+Palavra reservada: int
+Identifier: sz
+Fecha Parenteses: )
+Abre Chaves: {
+Palavra reservada: int
+Identifier: aux01
+Ponto-Virgula: ;
+Palavra reservada: int
+Identifier: aux02
+Ponto-Virgula: ;
+Identifier: aux01
+Operador: =
+Palavra reservada: this
+Ponto: .
+Identifier: Init
+Abre Parenteses: (
+Identifier: sz
+Fecha Parenteses: )
+Ponto-Virgula: ;
+Identifier: aux02
+Operador: =
+Palavra reservada: this
+Ponto: .
+Identifier: Print
+Abre Parenteses: (
+Fecha Parenteses: )
+Ponto-Virgula: ;
+Palavra reservada: if
+Abre Parenteses: (
+Palavra reservada: this
+Ponto: .
+Identifier: Search
+Abre Parenteses: (
+Numero: 8
+Fecha Parenteses: )
+Fecha Parenteses: )
+Palavra reservada: System.out.println
+Abre Parenteses: (
+Numero: 1
+Fecha Parenteses: )
+Ponto-Virgula: ;
+Identifier: else
+Palavra reservada: System.out.println
+Abre Parenteses: (
+Numero: 0
+Fecha Parenteses: )
+Ponto-Virgula: ;
+Palavra reservada: if
+Abre Parenteses: (
+Palavra reservada: this
+Ponto: .
+Identifier: Search
+Abre Parenteses: (
+Numero: 19
+Fecha Parenteses: )
+Fecha Parenteses: )
+Palavra reservada: System.out.println
+Abre Parenteses: (
+Numero: 1
+Fecha Parenteses: )
+Ponto-Virgula: ;
+Identifier: else
+Palavra reservada: System.out.println
+Abre Parenteses: (
+Numero: 0
+Fecha Parenteses: )
+Ponto-Virgula: ;
+Palavra reservada: if
+Abre Parenteses: (
+Palavra reservada: this
+Ponto: .
+Identifier: Search
+Abre Parenteses: (
+Numero: 20
+Fecha Parenteses: )
+Fecha Parenteses: )
+Palavra reservada: System.out.println
+Abre Parenteses: (
+Numero: 1
+Fecha Parenteses: )
+Ponto-Virgula: ;
+Identifier: else
+Palavra reservada: System.out.println
+Abre Parenteses: (
+Numero: 0
+Fecha Parenteses: )
+Ponto-Virgula: ;
+Palavra reservada: if
+Abre Parenteses: (
+Palavra reservada: this
+Ponto: .
+Identifier: Search
+Abre Parenteses: (
+Numero: 21
+Fecha Parenteses: )
+Fecha Parenteses: )
+Palavra reservada: System.out.println
+Abre Parenteses: (
+Numero: 1
+Fecha Parenteses: )
+Ponto-Virgula: ;
+Identifier: else
+Palavra reservada: System.out.println
+Abre Parenteses: (
+Numero: 0
+Fecha Parenteses: )
+Ponto-Virgula: ;
+Palavra reservada: if
+Abre Parenteses: (
+Palavra reservada: this
+Ponto: .
+Identifier: Search
+Abre Parenteses: (
+Numero: 37
+Fecha Parenteses: )
+Fecha Parenteses: )
+Palavra reservada: System.out.println
+Abre Parenteses: (
+Numero: 1
+Fecha Parenteses: )
+Ponto-Virgula: ;
+Identifier: else
+Palavra reservada: System.out.println
+Abre Parenteses: (
+Numero: 0
+Fecha Parenteses: )
+Ponto-Virgula: ;
+Palavra reservada: if
+Abre Parenteses: (
+Palavra reservada: this
+Ponto: .
+Identifier: Search
+Abre Parenteses: (
+Numero: 38
+Fecha Parenteses: )
+Fecha Parenteses: )
+Palavra reservada: System.out.println
+Abre Parenteses: (
+Numero: 1
+Fecha Parenteses: )
+Ponto-Virgula: ;
+Identifier: else
+Palavra reservada: System.out.println
+Abre Parenteses: (
+Numero: 0
+Fecha Parenteses: )
+Ponto-Virgula: ;
+Palavra reservada: if
+Abre Parenteses: (
+Palavra reservada: this
+Ponto: .
+Identifier: Search
+Abre Parenteses: (
+Numero: 39
+Fecha Parenteses: )
+Fecha Parenteses: )
+Palavra reservada: System.out.println
+Abre Parenteses: (
+Numero: 1
+Fecha Parenteses: )
+Ponto-Virgula: ;
+Identifier: else
+Palavra reservada: System.out.println
+Abre Parenteses: (
+Numero: 0
+Fecha Parenteses: )
+Ponto-Virgula: ;
+Palavra reservada: if
+Abre Parenteses: (
+Palavra reservada: this
+Ponto: .
+Identifier: Search
+Abre Parenteses: (
+Numero: 50
+Fecha Parenteses: )
+Fecha Parenteses: )
+Palavra reservada: System.out.println
+Abre Parenteses: (
+Numero: 1
+Fecha Parenteses: )
+Ponto-Virgula: ;
+Identifier: else
+Palavra reservada: System.out.println
+Abre Parenteses: (
+Numero: 0
+Fecha Parenteses: )
+Ponto-Virgula: ;
+Palavra reservada: return
+Numero: 999
+Ponto-Virgula: ;
+Fecha Chaves: }
+Comentario: // Search for a specific value (num) using
+Comentario: // binary search
+Palavra reservada: public
+Palavra reservada: boolean
+Identifier: Search
+Abre Parenteses: (
+Palavra reservada: int
+Identifier: num
+Fecha Parenteses: )
+Abre Chaves: {
+Palavra reservada: boolean
+Identifier: bs01
+Ponto-Virgula: ;
+Palavra reservada: int
+Identifier: right
+Ponto-Virgula: ;
+Palavra reservada: int
+Identifier: left
+Ponto-Virgula: ;
+Palavra reservada: boolean
+Identifier: var_cont
+Ponto-Virgula: ;
+Palavra reservada: int
+Identifier: medium
+Ponto-Virgula: ;
+Palavra reservada: int
+Identifier: aux01
+Ponto-Virgula: ;
+Palavra reservada: int
+Identifier: nt
+Ponto-Virgula: ;
+Identifier: aux01
+Operador: =
+Numero: 0
+Ponto-Virgula: ;
+Identifier: bs01
+Operador: =
+Palavra reservada: false
+Ponto-Virgula: ;
+Identifier: right
+Operador: =
+Identifier: number
+Palavra reservada: .length
+Ponto-Virgula: ;
+Identifier: right
+Operador: =
+Identifier: right
+Operador: -
+Numero: 1
+Ponto-Virgula: ;
+Identifier: left
+Operador: =
+Numero: 0
+Ponto-Virgula: ;
+Identifier: var_cont
+Operador: =
+Palavra reservada: true
+Ponto-Virgula: ;
+Palavra reservada: while
+Abre Parenteses: (
+Identifier: var_cont
+Fecha Parenteses: )
+Abre Chaves: {
+Identifier: medium
+Operador: =
+Identifier: left
+Operador: +
+Identifier: right
+Ponto-Virgula: ;
+Identifier: medium
+Operador: =
+Palavra reservada: this
+Ponto: .
+Identifier: Div
+Abre Parenteses: (
+Identifier: medium
+Fecha Parenteses: )
+Ponto-Virgula: ;
+Identifier: aux01
+Operador: =
+Identifier: number
+Abre Conchete: [
+Identifier: medium
+Fecha Conchete: ]
+Ponto-Virgula: ;
+Palavra reservada: if
+Abre Parenteses: (
+Identifier: num
+Operador: <
+Identifier: aux01
+Fecha Parenteses: )
+Identifier: right
+Operador: =
+Identifier: medium
+Operador: -
+Numero: 1
+Ponto-Virgula: ;
+Identifier: else
+Identifier: left
+Operador: =
+Identifier: medium
+Operador: +
+Numero: 1
+Ponto-Virgula: ;
+Palavra reservada: if
+Abre Parenteses: (
+Palavra reservada: this
+Ponto: .
+Identifier: Compare
+Abre Parenteses: (
+Identifier: aux01
+Virgula: ,
+Identifier: num
+Fecha Parenteses: )
+Fecha Parenteses: )
+Identifier: var_cont
+Operador: =
+Palavra reservada: false
+Ponto-Virgula: ;
+Identifier: else
+Identifier: var_cont
+Operador: =
+Palavra reservada: true
+Ponto-Virgula: ;
+Palavra reservada: if
+Abre Parenteses: (
+Identifier: right
+Operador: <
+Identifier: left
+Fecha Parenteses: )
+Identifier: var_cont
+Operador: =
+Palavra reservada: false
+Ponto-Virgula: ;
+Identifier: else
+Identifier: nt
+Operador: =
+Numero: 0
+Ponto-Virgula: ;
+Fecha Chaves: }
+Palavra reservada: if
+Abre Parenteses: (
+Palavra reservada: this
+Ponto: .
+Identifier: Compare
+Abre Parenteses: (
+Identifier: aux01
+Virgula: ,
+Identifier: num
+Fecha Parenteses: )
+Fecha Parenteses: )
+Identifier: bs01
+Operador: =
+Palavra reservada: true
+Ponto-Virgula: ;
+Identifier: else
+Identifier: bs01
+Operador: =
+Palavra reservada: false
+Ponto-Virgula: ;
+Palavra reservada: return
+Identifier: bs01
+Ponto-Virgula: ;
+Fecha Chaves: }
+Comentario: // This method computes and returns the
+Comentario: // integer division of a number (num) by 2
+Palavra reservada: public
+Palavra reservada: int
+Identifier: Div
+Abre Parenteses: (
+Palavra reservada: int
+Identifier: num
+Fecha Parenteses: )
+Abre Chaves: {
+Palavra reservada: int
+Identifier: count01
+Ponto-Virgula: ;
+Palavra reservada: int
+Identifier: count02
+Ponto-Virgula: ;
+Palavra reservada: int
+Identifier: aux03
+Ponto-Virgula: ;
+Identifier: count01
+Operador: =
+Numero: 0
+Ponto-Virgula: ;
+Identifier: count02
+Operador: =
+Numero: 0
+Ponto-Virgula: ;
+Identifier: aux03
+Operador: =
+Identifier: num
+Operador: -
+Numero: 1
+Ponto-Virgula: ;
+Palavra reservada: while
+Abre Parenteses: (
+Identifier: count02
+Operador: <
+Identifier: aux03
+Fecha Parenteses: )
+Abre Chaves: {
+Identifier: count01
+Operador: =
+Identifier: count01
+Operador: +
+Numero: 1
+Ponto-Virgula: ;
+Identifier: count02
+Operador: =
+Identifier: count02
+Operador: +
+Numero: 2
+Ponto-Virgula: ;
+Fecha Chaves: }
+Palavra reservada: return
+Identifier: count01
+Ponto-Virgula: ;
+Fecha Chaves: }
+Comentario: // This method compares two integers and
+Comentario: // returns true if they are equal and false
+Comentario: // otherwise
+Palavra reservada: public
+Palavra reservada: boolean
+Identifier: Compare
+Abre Parenteses: (
+Palavra reservada: int
+Identifier: num1
+Virgula: ,
+Palavra reservada: int
+Identifier: num2
+Fecha Parenteses: )
+Abre Chaves: {
+Palavra reservada: boolean
+Identifier: retval
+Ponto-Virgula: ;
+Palavra reservada: int
+Identifier: aux02
+Ponto-Virgula: ;
+Identifier: retval
+Operador: =
+Palavra reservada: false
+Ponto-Virgula: ;
+Identifier: aux02
+Operador: =
+Identifier: num2
+Operador: +
+Numero: 1
+Ponto-Virgula: ;
+Palavra reservada: if
+Abre Parenteses: (
+Identifier: num1
+Operador: <
+Identifier: num2
+Fecha Parenteses: )
+Identifier: retval
+Operador: =
+Palavra reservada: false
+Ponto-Virgula: ;
+Identifier: else
+Palavra reservada: if
+Abre Parenteses: (
+Exclamacao: !
+Abre Parenteses: (
+Identifier: num1
+Operador: <
+Identifier: aux02
+Fecha Parenteses: )
+Fecha Parenteses: )
+Identifier: retval
+Operador: =
+Palavra reservada: false
+Ponto-Virgula: ;
+Identifier: else
+Identifier: retval
+Operador: =
+Palavra reservada: true
+Ponto-Virgula: ;
+Palavra reservada: return
+Identifier: retval
+Ponto-Virgula: ;
+Fecha Chaves: }
+Comentario: // Print the integer array
+Palavra reservada: public
+Palavra reservada: int
+Identifier: Print
+Abre Parenteses: (
+Fecha Parenteses: )
+Abre Chaves: {
+Palavra reservada: int
+Identifier: j
+Ponto-Virgula: ;
+Identifier: j
+Operador: =
+Numero: 1
+Ponto-Virgula: ;
+Palavra reservada: while
+Abre Parenteses: (
+Identifier: j
+Operador: <
+Abre Parenteses: (
+Identifier: size
+Fecha Parenteses: )
+Fecha Parenteses: )
+Abre Chaves: {
+Palavra reservada: System.out.println
+Abre Parenteses: (
+Identifier: number
+Abre Conchete: [
+Identifier: j
+Fecha Conchete: ]
+Fecha Parenteses: )
+Ponto-Virgula: ;
+Identifier: j
+Operador: =
+Identifier: j
+Operador: +
+Numero: 1
+Ponto-Virgula: ;
+Fecha Chaves: }
+Palavra reservada: System.out.println
+Abre Parenteses: (
+Numero: 99999
+Fecha Parenteses: )
+Ponto-Virgula: ;
+Palavra reservada: return
+Numero: 0
+Ponto-Virgula: ;
+Fecha Chaves: }
+Comentario: // Initialize the integer array
+Palavra reservada: public
+Palavra reservada: int
+Identifier: Init
+Abre Parenteses: (
+Palavra reservada: int
+Identifier: sz
+Fecha Parenteses: )
+Abre Chaves: {
+Palavra reservada: int
+Identifier: j
+Ponto-Virgula: ;
+Palavra reservada: int
+Identifier: k
+Ponto-Virgula: ;
+Palavra reservada: int
+Identifier: aux02
+Ponto-Virgula: ;
+Palavra reservada: int
+Identifier: aux01
+Ponto-Virgula: ;
+Identifier: size
+Operador: =
+Identifier: sz
+Ponto-Virgula: ;
+Identifier: number
+Operador: =
+Palavra reservada: new
+Palavra reservada: int
+Abre Conchete: [
+Identifier: sz
+Fecha Conchete: ]
+Ponto-Virgula: ;
+Identifier: j
+Operador: =
+Numero: 1
+Ponto-Virgula: ;
+Identifier: k
+Operador: =
+Identifier: size
+Operador: +
+Numero: 1
+Ponto-Virgula: ;
+Palavra reservada: while
+Abre Parenteses: (
+Identifier: j
+Operador: <
+Abre Parenteses: (
+Identifier: size
+Fecha Parenteses: )
+Fecha Parenteses: )
+Abre Chaves: {
+Identifier: aux01
+Operador: =
+Numero: 2
+Operador: *
+Identifier: j
+Ponto-Virgula: ;
+Identifier: aux02
+Operador: =
+Identifier: k
+Operador: -
+Numero: 3
+Ponto-Virgula: ;
+Identifier: number
+Abre Conchete: [
+Identifier: j
+Fecha Conchete: ]
+Operador: =
+Identifier: aux01
+Operador: +
+Identifier: aux02
+Ponto-Virgula: ;
+Identifier: j
+Operador: =
+Identifier: j
+Operador: +
+Numero: 1
+Ponto-Virgula: ;
+Identifier: k
+Operador: =
+Identifier: k
+Operador: -
+Numero: 1
+Ponto-Virgula: ;
+Fecha Chaves: }
+Palavra reservada: return
+Numero: 0
+Ponto-Virgula: ;
+Fecha Chaves: }
+Fecha Chaves: }
